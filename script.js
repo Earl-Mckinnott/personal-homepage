@@ -1,3 +1,5 @@
+const preload = new Image();
+preload.src = "family.jpg";
 function revealMessage() {
                 document.getElementById("cool-text").textContent = "Boom. You just ran your first Javascript function.";
             }
