@@ -1,0 +1,109 @@
+            body{
+                background-color: rgb(173, 216, 230);
+                color: black;
+                transition: background-color 0.2s linear;
+            }
+
+            .dark-mode{
+                background-color: #121212;
+                color: #f0f0f0;
+            }
+            button {
+                margin: 10px;
+                padding: 8px 12px;
+                font-size: 16px;
+            }
+
+            .techno-mode{
+                background-color: rgb(0, 85, 14);
+                color: rgb(255, 237, 74)
+            }
+            .techno-btn {
+                background-color: rgb(255, 237, 74);
+                color: rgb(0, 109, 58);
+                font-weight:bold; 
+                border: 2px solid rgb(0, 109, 58);
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgb(255, 237, 74);
+                transition: 0.3s ease;
+            }
+            .techno-btn:hover {
+                background-color: rgb(0, 109, 58);
+                color:rgb(255, 237, 74);
+                box-shadow: 0 0 50px rgb(255, 237, 74);
+            }
+
+            .section-heading {
+                font-family: 'Georgia', serif;
+                font-size: 30px;
+                color: red;
+                text-transform: uppercase;
+            }
+            .section-text {
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 1.6;
+                color: rgb(192, 160, 0);
+                max-width: 800px;
+            }
+            
+
+            #family-photo img{
+                border-radius: 10px;
+                margin-bottom: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2)
+            }
+
+            .fade-in {
+                opacity: 0;
+                transform: scale(0.7); 
+                animation: fadeScaleIn 2s ease forwards;
+            }
+             @keyframes fadeScaleIn{
+                to{
+                    opacity:1;
+                    transform: scale(1);
+                }
+             }
+
+             #reveal-canvas {
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                image-rendering: pixelated;
+                touch-action: none;
+             }
+
+             .theme-toggle {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+  z-index: 1000;
+}
+
+.fade-in-logo {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: logoFadeIn 2s ease forwards;
+}
+
+@keyframes logoFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#cool-button {
+    margin-left: 20px
+}
+
+#rambo {
+    margin-top: 40px
+}
+#rambo-text {
+    font-weight: bold
+}
