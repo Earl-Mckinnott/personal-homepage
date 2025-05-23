@@ -143,4 +143,45 @@ canvas.addEventListener("mousemove", e => {
 
   canvas.addEventListener("touchend", () => drawing = false);
 };
-    
+
+
+// family face reveal
+
+function revealFamilyMember() {
+  const input = document.getElementById("name-input").value.trim().toLowerCase();
+  const resultDiv = document.getElementById("family-result");
+
+  let imageSrc = "";
+  let caption = "";
+
+  if (input === "claritza") {
+    imageSrc = "mom.jpg"
+  } else if (input === "julio") {
+    imageSrc = "dad.jpg"
+  } else if (input === "laritza"){
+    imageSrc = "sis.jpg"
+  } else {
+    resultDiv.innerHTML = `<p>Sorry, QUE?</p>`
+    return;
+  }
+  
+  resultDiv.innerHTML = `
+  <img src="${imageSrc}" alt="${input}" width="250" class="fade-in" />
+  `;
+
+setTimeout(() => {
+  window.scrollTo(0, document.body.scrollHeight);
+
+  const resultSection = document.getElementById("family-result");
+  resultSection.classList.add("bounce");
+
+  setTimeout(() => {
+    resultSection.classList.remove("bounce");
+  }, 600);
+}, 50);
+
+}
+document.getElementById("family-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // ← this stops the page from refreshing
+  revealFamilyMember();
+});

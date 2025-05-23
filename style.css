@@ -42,8 +42,8 @@
             .section-text {
                 font-weight: bold;
                 font-size: 20px;
-                line-height: 1.6;
-                color: rgb(192, 160, 0);
+                line-height: 1.5;
+                color: rgb(255, 200, 0);
                 max-width: 800px;
             }
             
@@ -106,4 +106,21 @@
 }
 #rambo-text {
     font-weight: bold
+}
+
+#ffm-Title {
+    font-size: xx-large;
+    color: rgb(153, 230, 0);
+    margin-top: 60px
+}
+
+.bounce {
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-12px); }
+  60%  { transform: translateY(6px); }
+  100% { transform: translateY(0); }
 }
